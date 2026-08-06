@@ -32,12 +32,12 @@ Route::put('/ruang/{id}', [RuangController::class, 'update'])->name('ruang.updat
 Route::delete('/ruang/{id}', [RuangController::class, 'destroy'])->name('ruang.destroy'); // Hapus ruang
 
 // Jenis
-Route::get('/jenis', [JenisController::class, 'index'])->name('Jenis.index'); // Tampilkan semua Jenis
+Route::get('/jenis', [JenisController::class, 'index'])->name('jenis.index'); // Tampilkan semua Jenis
 Route::get('/jenis/create', [JenisController::class, 'create'])->name('jenis.create'); // Form tambah Jenis
-Route::post('/jenis', [JenisController::class, 'store'])->name('Jenis.store'); // Simpan Jenis baru
-Route::get('/jenis/{id}/edit', [JenisController::class, 'edit'])->name('Jenis.edit'); // Form edit Jenis
-Route::put('/jenis/{id}', [JenisController::class, 'update'])->name('Jenis.update'); // Update Jenis
-Route::delete('/jenis/{id}', [JenisController::class, 'destroy'])->name('Jenis.destroy'); // Hapus Jenis
+Route::post('/jenis', [JenisController::class, 'store'])->name('jenis.store'); // Simpan Jenis baru
+Route::get('/jenis/{id}/edit', [JenisController::class, 'edit'])->name('jenis.edit'); // Form edit Jenis
+Route::put('/jenis/{id}', [JenisController::class, 'update'])->name('jenis.update'); // Update Jenis
+Route::delete('/jenis/{id}', [JenisController::class, 'destroy'])->name('jenis.destroy'); // Hapus Jenis
 
 // Kategori
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index'); // Tampilkan semua kategori

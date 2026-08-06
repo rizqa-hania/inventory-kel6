@@ -49,25 +49,25 @@
               <li class="nav-item">
                 <a href="{{route('user.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Form User</p>
+                  <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('customers.index')}}" class="nav-link">
+                <a href="{{route('ruang.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Form Customer</p>
+                  <p>Ruang</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('category.index')}}" class="nav-link">
+                <a href="{{route('jenis.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Form Category</p>
+                  <p>jenis</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('products.index')}}" class="nav-link">
+                <a href="{{route('kategori.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Form Product</p>
+                  <p>kategori</p>
                 </a>
               </li>
             </ul>
@@ -102,7 +102,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('user.index')}}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Laporan Penjualan</p>
                 </a>
