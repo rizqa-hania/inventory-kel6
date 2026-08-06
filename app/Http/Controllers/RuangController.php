@@ -37,13 +37,17 @@ class RuangController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_ruang' => 'required|max:255',
-            'deskripsi' => 'nullable'
+            'nama_ruang' => 'required |string|max:255|unique:ruang',
+            'deskripsi' => 'nullable|string',
         ]);
 
-        Ruang::create($request->all());
+        Ruang::create([
+            'nama_ruang' => $request->nama_ruang,
+            'deskripsi' => $request->deskripsi
+        ]);
 
-        return redirect()->route('ruang.index')->with('success', 'Data ruang berhasil ditambahkan');
+        return redirect()->route('ruang.index');
+
     }
 
     /**
