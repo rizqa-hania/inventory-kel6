@@ -17,7 +17,12 @@ class Barang extends Model
     ];
 
     public function ruang()
-    {
-        return $this->belongsTo(Ruang::class, 'ruang_id', 'ruang_id');
-    }
+        {
+            return $this->belongsTo(Ruang::class, 'ruang_id', 'ruang_id');
+        }
+
+    public function jenis()
+        {
+            return $this->belongsTo(Jenis::class, 'jenis_id', 'jenis_id');
+        }
 }
