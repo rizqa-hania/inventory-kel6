@@ -1,30 +1,68 @@
-<h3>Data Jenis Barang</h3>
+@extends('template.layout')
 
-<a href="{{ route('jenis.create') }}">+ Create Jenis</a>
+@section('content')
 
-<table border="1" cellpadding="10">
-    <thead>
-        <tr>
-            <th>ID Jenis</th>
-            <th>Jenis Barang</th>
-        </tr>
-    </thead>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
 
-    <tbody>
-        @foreach ($jenis as $v)
-        <tr>
-            <td>{{ $v->jenis_id }}</td>
-            <td>{{ $v->jenis_barang }}</td>
-            <td>
-                <a href="{{ route('jenis.edit', $v->jenis_id) }}">Edit</a>
+            <div class="card-header">
+                Data Jenis Barang
+            </div>
 
-                <form action="{{ route('jenis.destroy', $v->jenis_id) }}" method="POST" style="display:inline;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">Hapus</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+            <div class="card-body table-responsive">
+
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jenis Barang</th>
+                            <th>
+                                <a href="{{ route('jenis.create') }}" class="btn btn-primary btn-sm">
+                                    + Tambah Jenis
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach ($jenis as $v)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $v->jenis_barang }}</td>
+                            <td>
+                                <form action="{{ route('jenis.destroy', $v->jenis_id) }}" method="POST" style="display:inline">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <a href="{{ route('jenis.edit', $v->jenis_id) }}" class="btn btn-success btn-sm">
+                                        Edit
+                                    </a>
+
+                                    <button type="submit"
+                                        onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
+                                        class="btn btn-danger btn-sm">
+                                        Hapus
+                                    </button>
+
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@endsection

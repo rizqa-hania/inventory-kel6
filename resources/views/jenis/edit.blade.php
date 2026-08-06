@@ -1,23 +1,40 @@
-<h3>Edit Data Jenis Barang</h3>
+@extends('template.layout')
 
-<form action="{{ route('jenis.update', $jenis->jenis_id) }}" method="POST">
-    @csrf
-    @method('PUT')
+@section('content')
 
-    <table>
-        <tr>
-            <td>Jenis Barang</td>
-            <td>
-                <input type="text" name="jenis_barang" value="{{ $jenis->jenis_barang }}">
-            </td>
-        </tr>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
 
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit">Update</button>
-                <a href="{{ route('jenis.index') }}">Kembali</a>
-            </td>
-        </tr>
-    </table>
-</form>
+            <div class="card-header">
+                Edit Data Jenis Barang
+            </div>
+
+            <div class="card-body">
+
+                <form action="{{ route('jenis.update', $jenis->jenis_id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+
+                    <div class="form-group mb-3">
+                        <label for="jenis_barang" class="form-label">Jenis Barang</label>
+                        <input type="text" name="jenis_barang" id="jenis_barang" class="form-control" value="{{ $jenis->jenis_barang }}" placeholder="Masukkan jenis barang" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        Update
+                    </button>
+
+                    <a href="{{ route('jenis.index') }}" class="btn btn-secondary">
+                        Kembali
+                    </a>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@endsection
