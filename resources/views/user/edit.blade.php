@@ -36,7 +36,7 @@
 
                     <div class="mb-3">
                         <label for="no_telp" class="form-label">No Telpon</label> 
-                        <input type="tel" class="form-control @error('no_telp') is-invalid @enderror" name="no_telp" value="{{ old('no_telp', $user->no_telp) }}">
+                        <input type="number" class="form-control @error('no_telp') is-invalid @enderror" name="no_telp" value="{{ old('no_telp', $user->no_telp) }}">
                         @error('no_telp')
                             <span class="text-danger small">{{ $message }}</span>
                         @enderror

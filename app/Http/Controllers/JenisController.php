@@ -38,11 +38,13 @@ class JenisController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'jenis_barang' => 'required'
+            'jenis_barang' => 'required',
+            'deskripsi' => 'nullable'
         ]);
 
         Jenis::create([
-            'jenis_barang' => $request->jenis_barang
+            'jenis_barang' => $request->jenis_barang,
+            'deskripsi' => $request->deskripsi
         ]);
 
         return redirect()->route('jenis.index')
@@ -83,13 +85,15 @@ class JenisController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'jenis_barang' => 'required'
+            'jenis_barang' => 'required',
+            'deskripsi' => 'nullable'
         ]);
 
         $jenis = Jenis::findOrFail($id);
 
         $jenis->update([
-            'jenis_barang' => $request->jenis_barang
+            'jenis_barang' => $request->jenis_barang,
+            'deskripsi' => $request->deskripsi
         ]);
 
         return redirect()->route('jenis.index')

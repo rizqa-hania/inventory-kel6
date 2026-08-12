@@ -21,6 +21,11 @@
                         <input type="text" name="jenis_barang" id="jenis_barang" class="form-control" value="{{ $jenis->jenis_barang }}" placeholder="Masukkan jenis barang" required>
                     </div>
 
+                    <div class="form-group mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea name="deskripsi" id="deskripsi" class="form-control">{{ $jenis->deskripsi }}</textarea>
+                    </div>
+
                     <button type="submit" class="btn btn-success">
                         Update
                     </button>

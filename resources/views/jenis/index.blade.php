@@ -23,6 +23,7 @@
                         <tr>
                             <th>No</th>
                             <th>Jenis Barang</th>
+                            <th>Deskripsi</th>  
                             <th>
                                 <a href="{{ route('jenis.create') }}" class="btn btn-primary btn-sm">
                                     + Tambah Jenis
@@ -36,6 +37,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $v->jenis_barang }}</td>
+                            <td>{{ $v->deskripsi }}</td>
                             <td>
                                 <form action="{{ route('jenis.destroy', $v->jenis_id) }}" method="POST" style="display:inline">
                                     @csrf

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('template.layout')
 
 @section('content')
 
@@ -12,12 +12,12 @@
 
         <div class="mb-3">
             <label>Nama Kategori</label>
+            <input type="text" name="kategori_barang" class="form-control" required>
+        </div>
 
-            <input
-                type="text"
-                name="kategori_barang"
-                class="form-control"
-                required>
+        <div class="mb-3">
+            <label>Deskripsi</label>
+            <textarea name="deskripsi" class="form-control"></textarea>
         </div>
 
         <button class="btn btn-primary">

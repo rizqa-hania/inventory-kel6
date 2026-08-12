@@ -20,6 +20,11 @@
                         <input type="text" name="jenis_barang" id="jenis_barang" class="form-control" placeholder="Masukkan jenis barang" required>
                     </div>
 
+                    <div class="form-group mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea name="deskripsi" id="deskripsi" class="form-control"></textarea>
+                    </div>
+
                     <button type="submit" class="btn btn-primary">
                         Simpan
                     </button>

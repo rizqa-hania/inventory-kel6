@@ -9,14 +9,14 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="nama" class="form-label" id="nama">Nama</label>
-                        <input type="text" name="nama" class="form-control" value="{{old('nama')}}" required>
+                        <input type="text" name="nama" class="form-control" value="{{old('nama')}}">
                         @if ($errors->has('nama'))
                         <span class="text-danger">{{ $errors->first('nama') }}</span>
                         @endif
                     </div>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" name="username" class="form-control" value="{{old('username')}}" required>
+                        <input type="text" name="username" class="form-control" value="{{old('username')}}">
                         @if ($errors->has('username'))
                         <span class="text-danger">{{ $errors->first('username') }}</span>
                         @endif
@@ -27,9 +27,10 @@
                         @if ($errors->has('email'))
                         <span class="text-danger">{{ $errors->first('email') }}</span>
                         @endif
+                    </div>
                     <div class="mb-3">
                         <label for="no_telp" class="form-label">No Telpon</label>
-                        <input type="tel" name="no_telp" class="form-control" value="{{ old('no_telp') }}">
+                        <input type="number" name="no_telp" class="form-control" value="{{ old('no_telp') }}">
                         @if ($errors->has('no_telp'))
                         <span class="text-danger">{{ $errors->first('no_telp') }}</span>
                         @endif

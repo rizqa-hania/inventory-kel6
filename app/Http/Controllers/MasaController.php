@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ekonomis;
+use App\Barang;
 
 class MasaController extends Controller
 {

@@ -21,11 +21,13 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kategori_barang' => 'required|max:255'
+            'kategori_barang' => 'required|max:255',
+            'deskripsi' => 'nullable'
         ]);
 
         Kategori::create([
-            'kategori_barang' => $request->kategori_barang
+            'kategori_barang' => $request->kategori_barang,
+            'deskripsi' => $request->deskripsi
         ]);
 
         return redirect()->route('kategori.index')
@@ -42,13 +44,15 @@ class KategoriController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'kategori_barang' => 'required|max:255'
+            'kategori_barang' => 'required|max:255',
+            'deskripsi' => 'nullable'
         ]);
 
         $kategori = Kategori::findOrFail($id);
 
         $kategori->update([
-            'kategori_barang' => $request->kategori_barang
+            'kategori_barang' => $request->kategori_barang,
+            'deskripsi' => $request->deskripsi
         ]);
 
         return redirect()->route('kategori.index')

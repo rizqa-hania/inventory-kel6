@@ -6,6 +6,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MasaController;
 use App\Http\Controllers\RuangController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EkonomisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,3 +71,5 @@ Route::post('/user', [UserController::class, 'store'])->name('user.store'); // S
 Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit'); // Form edit user
 Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update'); // Update user
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy'); // Hapus user
+
+// Masa Ekonomis

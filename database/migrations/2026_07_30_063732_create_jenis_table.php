@@ -16,6 +16,7 @@ class CreateJenisTable extends Migration
         Schema::create('jenis', function (Blueprint $table) {
             $table->bigIncrements('jenis_id');
             $table->string('jenis_barang');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }

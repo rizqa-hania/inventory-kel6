@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('template.layout')
 @section('content')
 
 <div class="container">
@@ -19,6 +18,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama Kategori</th>
+                <th>Deskripsi</th>
                 <th width="180">Aksi</th>
             </tr>
         </thead>
@@ -28,6 +28,7 @@
             <tr>
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $item->kategori_barang }}</td>
+                <td>{{ $item->deskripsi }}</td>
                 <td>
 
                     <a href="{{ route('kategori.edit',$item->kategori_id) }}"

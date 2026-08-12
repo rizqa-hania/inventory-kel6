@@ -4,15 +4,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h3 class="card-title">Data Admin</h3>
-                    </div>
-                        <a href="{{ route('user.create') }}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-plus"></i> Admin 
-                        </a>
-                    </div>
-                </div>
+                Data Admin
             </div>
             <div class="card-body table-responsive">
                 @if(session('success'))
@@ -23,7 +15,7 @@
                         </button>
                     </div>
                 @endif
-                <table id="table" class="table table-sm table-striped table-hover">
+                <table id="table" class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -31,6 +23,11 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>No Telpon</th>
+                            <th>      
+                                <a href="{{ route('user.create') }}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-plus"></i> Admin 
+                                </a>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>

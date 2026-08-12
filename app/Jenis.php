@@ -8,7 +8,7 @@ class Jenis extends Model
 {
     protected $table = 'jenis';
     protected $primaryKey = 'jenis_id';
-    protected $fillable = ['jenis_barang'];
+    protected $fillable = ['jenis_barang', 'deskripsi'];
 
     public function jenis()
     {
