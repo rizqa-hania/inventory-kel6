@@ -50,7 +50,7 @@
                         @enderror
                     </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Perbarui</button>
                     <a href="{{ route('user.index') }}" class="btn btn-secondary btn-sm">Kembali</a>
                 </div>
             </form>

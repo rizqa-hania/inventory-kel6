@@ -29,7 +29,7 @@
                                     {{ csrf_field() }}
                                     @method('DELETE')
                                     <a href="{{ route('ruang.edit', $v->ruang_id) }}" class="btn btn-success btn-sm">Edit</a>
-                                    <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus ruang ini?' )" class="btn btn-danger btn-sm">Delete</button>
+                                    <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus ruang ini?' )" class="btn btn-danger btn-sm">Hapus</button>
                                 </form>
                             </td>
                         </tr>

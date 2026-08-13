@@ -42,7 +42,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-success">
-                        Update
+                        Perbarui
                     </button>
 
                     <a href="{{ route('kategori.index') }}" class="btn btn-secondary">

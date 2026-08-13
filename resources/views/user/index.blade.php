@@ -42,8 +42,8 @@
                                 <form action="{{ route('user.destroy', $v->user_id) }}" method="POST" style="display: inline">
                                     @csrf
                                     @method('DELETE')
-                                    <a href="{{ route('user.edit', $v->user_id) }}">Edit</a>
-                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data admin ini?')">Delete</button>
+                                    <a href="{{ route('user.edit', $v->user_id) }}" class="btn btn-success btn-sm">Edit</a>
+                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data admin ini?')"  class="btn btn-danger btn-sm">  Hapus </button>
                                 </form>
                             </td>
                         </tr>

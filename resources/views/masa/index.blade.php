@@ -43,7 +43,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <a href="{{ route('masa.edit', $v->masa_id) }}">Edit</a>
-                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data masa ekonomis ini?')">Delete</button>
+                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data masa ekonomis ini?')">Hapus</button>
                                 </form>
                             </td>
                         </tr>

@@ -20,7 +20,7 @@
                 </div>
             </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Perbarui</button>
                      <a href="{{route('ruang.index')}}" class="btn btn-success btn-sm">Kembali</a>
                 </div>
             </form>
