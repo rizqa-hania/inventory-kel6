@@ -39,7 +39,7 @@
                         <td>{{ $b->merk }}</td>
                         <td>{{ $b->jumlah }}</td>
                         <td>{{ $b->ruang->nama_ruang }}</td>
-                        <td>{{ $b->jenis->nama_jenis }}</td>
+                        <td>{{ $b->jenis->jenis_barang }}</td>
                         <td>{{ ucfirst($b->status) }}</td>
 
                         <td>
