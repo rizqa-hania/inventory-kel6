@@ -29,6 +29,6 @@ class Barang extends Model
 
     public function masaEkonomis()
         {
-            return $this->hasOne(Ekonomis::class, 'id_barang');
+            return $this->hasOne(Ekonomis::class, 'barang_id', 'barang_id');
         }
 }

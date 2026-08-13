@@ -18,6 +18,6 @@ class Ekonomis extends Model
 
     public function barang()
     {
-        return $this->belongsTo(Barang::class, 'id_barang');
+        return $this->belongsTo(Barang::class, 'barang_id', 'barang_id');
     }
 }

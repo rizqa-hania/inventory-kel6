@@ -34,7 +34,7 @@
                         @foreach ($masa as $v)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $v->barang->nama_barang }}</td>
+                            <td>{{ $v->barang->nama_barang ?? '-' }}</td>
                             <td>{{ $v->tanggal_pembelian }}</td>
                             <td>Rp {{ number_format($v->harga_pembelian, 0, ',', '.') }}</td>
                             <td>{{ $v->masa_pakai_pertahun }} Tahun</td>
@@ -43,7 +43,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <a href="{{ route('masa.edit', $v->masa_id) }}">Edit</a>
-                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data admin ini?')">Delete</button>
+                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data masa ekonomis ini?')">Delete</button>
                                 </form>
                             </td>
                         </tr>
