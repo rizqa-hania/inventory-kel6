@@ -13,44 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            [
-                'nama' => 'Maulina Sheva',
-                'username' => 'Lina',
-                'email' => 'lina.sheva@gmail.com',
-                'no_telp' => '089512345678',
-                'password' => '12345',
-            ],
-            [
-                'nama' => 'Melani Widiastuti',
-                'username' => 'Melani',
-                'email' => 'melani@gmail.com',
-                'no_telp' => '089512344321',
-                'password' => '12345',
-            ],
-            [
-                'nama' => 'Nakilla Khoirin Periska',
-                'username' => 'Nakilla',
-                'email' => 'nakilla@gmail.com',
-                'no_telp' => '089598765432',
-                'password' => '12345',
-            ],
-            [
-                'nama' => 'Rizqa Hania Putri Arahman',
-                'username' => 'Rizqa',
-                'email' => 'rizqa.hani@gmail.com',
-                'no_telp' => '089523456789',
-                'password' => '12345',
-            ],
-            [
-                'nama' => 'Zaida Thalitha Atiqah',
-                'username' => 'Zaida',
-                'email' => 'zaida.lita@gmail.com',
-                'no_telp' => '089511112222',
-                'password' => '12345',
-            ],
-        ]);
-
         DB::table('jenis')->insert([
             [
                 'jenis_barang' => 'meja',
