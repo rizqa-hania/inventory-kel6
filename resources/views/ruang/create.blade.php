@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-primary">
                 Tambah Ruang
             </div>
             <form action="{{ route('ruang.store') }}" method="POST">

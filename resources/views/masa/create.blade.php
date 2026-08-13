@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">Tambah Masa Pakai
+            <div class="card-header bg-primary">Tambah Masa Pakai
                 <form action="{{ route('masa.store') }}" method="POST">
                 @csrf
                 <div class="card-body">

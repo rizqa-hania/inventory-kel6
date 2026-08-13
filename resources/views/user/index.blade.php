@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-primary">
                 Data Admin
             </div>
             <div class="card-body table-responsive">

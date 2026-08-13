@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">Tambah Admin
+            <div class="card-header bg-primary">Tambah Admin
                 <form action="{{ route('user.store') }}" method="POST">
                 @csrf
                 <div class="card-body">

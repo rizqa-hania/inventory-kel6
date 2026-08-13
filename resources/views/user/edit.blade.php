@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-primary">
                 Update Data Admin
             </div>
             <form action="{{ route('user.update', $user->user_id) }}" method="POST"> 
