@@ -25,4 +25,9 @@ class Barang extends Model
         {
             return $this->belongsTo(Jenis::class, 'jenis_id', 'jenis_id');
         }
+
+    public function masaEkonomis()
+        {
+            return $this->hasOne(Ekonomis::class, 'id_barang');
+        }
 }

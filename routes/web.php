@@ -6,7 +6,6 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MasaController;
 use App\Http\Controllers\RuangController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\EkonomisController;
 use Illuminate\Support\Facades\Route;
 
 /*

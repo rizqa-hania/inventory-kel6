@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Barang;
 
 class Ekonomis extends Model
 {
@@ -14,4 +15,9 @@ class Ekonomis extends Model
         'harga_pembelian',
         'masa_pakai_pertahun',
     ];
+
+    public function barang()
+    {
+        return $this->belongsTo(Barang::class, 'id_barang');
+    }
 }

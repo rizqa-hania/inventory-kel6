@@ -15,7 +15,8 @@ class MasaController extends Controller
      */
     public function index()
     {
-        //
+        $masa = Ekonomis::all();
+        return view('masa.index', compact('masa'));
     }
 
     /**
@@ -25,7 +26,8 @@ class MasaController extends Controller
      */
     public function create()
     {
-        //
+        $barang = Barang::all();
+        return view('masa.create', compact('barang'));
     }
 
     /**
@@ -36,7 +38,21 @@ class MasaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'barang_id'            => 'required',
+            'tanggal_pembelian'    => 'required',
+            'harga_pembelian'      => 'required',
+            'masa_pakai_pertahun'  => 'required',
+        ]);
+
+        Ekonomis::create([
+            'barang_id'            => $request->barang_id,
+            'tanggal_pembelian'    => $request->tanggal_pembelian,
+            'harga_pembelian'      => $request->harga_pembelian,
+            'masa_pakai_pertahun'  => $request->masa_pakai_pertahun,
+        ]);
+        
+        return redirect()->route('masa.index');
     }
 
     /**
