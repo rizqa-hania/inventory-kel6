@@ -21,42 +21,34 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        // Validasi
         $request->validate(
             [
-                'username' => 'required',
+                'email' => 'required|email',
                 'password' => 'required',
             ],
             [
-                'username.required' => 'Username wajib diisi.',
+                'email.required' => 'Email wajib diisi.',
+                'email.email' => 'Format email tidak valid.',
                 'password.required' => 'Password wajib diisi.',
             ]
         );
 
-
-        // Data yang digunakan untuk login
         $credentials = [
-            'username' => $request->username,
+            'email' => $request->email,
             'password' => $request->password,
         ];
 
-
-        // Cek username dan password
         if (Auth::attempt($credentials)) {
 
-            // Membuat session baru
             $request->session()->regenerate();
 
-            // Login berhasil
             return redirect()->route('dashboard.index');
         }
 
-
-        // Login gagal
         return back()
-            ->withInput($request->only('username'))
+            ->withInput($request->only('email'))
             ->withErrors([
-                'login' => 'Username atau password yang kamu masukkan salah.',
+                'login' => 'Email atau password yang kamu masukkan salah.',
             ]);
     }
 

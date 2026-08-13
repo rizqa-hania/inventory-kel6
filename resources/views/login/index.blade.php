@@ -604,18 +604,18 @@
 
                 <div class="form-group">
 
-                    <label for="username">
-                        Username
+                    <label for="email">
+                        email
                     </label>
 
                     <input
                         type="text"
-                        id="username"
-                        name="username"
+                        id="email"
+                        name="email"
                         class="form-control"
-                        placeholder="Masukkan username"
-                        value="{{ old('username') }}"
-                        autocomplete="username"
+                        placeholder="Masukkan email"
+                        value="{{ old('email') }}"
+                        autocomplete="email"
                         autofocus
                     >
 
