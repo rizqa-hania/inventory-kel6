@@ -21,13 +21,7 @@
                             Nama Kategori
                         </label>
 
-                        <input type="text"
-                            name="kategori_barang"
-                            id="kategori_barang"
-                            class="form-control"
-                            value="{{ $kategori->kategori_barang }}"
-                            placeholder="Masukkan nama kategori"
-                            required>
+                        <input type="text" name="kategori_barang" id="kategori_barang" class="form-control" value="{{ $kategori->kategori_barang }}" placeholder="Masukkan nama kategori" required>
                     </div>
 
                     <div class="form-group mb-3">
