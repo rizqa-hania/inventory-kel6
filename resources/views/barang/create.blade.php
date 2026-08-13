@@ -61,7 +61,7 @@
 
                             @foreach ($jenis as $j)
                                 <option value="{{ $j->jenis_id }}" {{ old('jenis_id') == $j->jenis_id ? 'selected' : '' }}>
-                                    {{ $j->nama_jenis }}
+                                    {{ $j->jenis_barang }}
                                 </option>
                             @endforeach
                         </select>

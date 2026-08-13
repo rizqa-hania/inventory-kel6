@@ -72,3 +72,9 @@ Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update')
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy'); // Hapus user
 
 // Masa Ekonomis
+
+
+//landing page
+Route::get('/', function () {
+    return view('landing page.index');
+});

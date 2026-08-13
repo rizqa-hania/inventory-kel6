@@ -103,7 +103,6 @@ class RuangController extends Controller
     {
         $ruang = Ruang::findOrFail($id);
         $ruang->delete();
-
         return redirect()->route('ruang.index')->with('success', 'Data ruang berhasil dihapus');
     }
 }

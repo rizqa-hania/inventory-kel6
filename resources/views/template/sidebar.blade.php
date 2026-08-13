@@ -54,6 +54,7 @@
                   <i class="fas fa-cubes"></i>
                   <p>Jenis</p>
                 </a>
+                </li>
               </li>
               <li class="nav-item">
                 <a href="{{route('kategori.index')}}" class="nav-link">
@@ -75,6 +76,7 @@
               </li>
             <!-- </ul> -->
           </li>
+          
          
         <!--  <li class="nav-item">
             <a href="#" class="nav-link active">

@@ -17,7 +17,6 @@ class BarangController extends Controller
     public function index()
     {
         $barang = Barang::with('ruang', 'jenis')->get();
-
         return view('barang.index', compact('barang'));
     }
 
