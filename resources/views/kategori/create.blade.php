@@ -2,34 +2,51 @@
 
 @section('content')
 
-<div class="container">
+<div class="row">
+    <div class="col-12">
+        <div class="card">
 
-    <h3>Tambah Kategori</h3>
+            <div class="card-header">
+                Tambah Data Kategori
+            </div>
 
-    <form action="{{ route('kategori.store') }}" method="POST">
+            <div class="card-body">
 
-        @csrf
+                <form action="{{ route('kategori.store') }}" method="POST">
+                    @csrf
 
-        <div class="mb-3">
-            <label>Nama Kategori</label>
-            <input type="text" name="kategori_barang" class="form-control" required>
+                    <div class="form-group mb-3">
+                        <label for="kategori_barang" class="form-label">Nama Kategori</label>
+                        <input type="text"
+                            name="kategori_barang"
+                            id="kategori_barang"
+                            class="form-control"
+                            placeholder="Masukkan nama kategori"
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea
+                            name="deskripsi"
+                            id="deskripsi"
+                            class="form-control"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Simpan
+                    </button>
+
+                    <a href="{{ route('kategori.index') }}" class="btn btn-secondary">
+                        Kembali
+                    </a>
+
+                </form>
+
+            </div>
+
         </div>
-
-        <div class="mb-3">
-            <label>Deskripsi</label>
-            <textarea name="deskripsi" class="form-control"></textarea>
-        </div>
-
-        <button class="btn btn-primary">
-            Simpan
-        </button>
-
-        <a href="{{ route('kategori.index') }}" class="btn btn-secondary">
-            Kembali
-        </a>
-
-    </form>
-
+    </div>
 </div>
 
 @endsection
