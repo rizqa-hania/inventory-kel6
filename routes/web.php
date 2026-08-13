@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\JenisController;
 use App\Http\Controllers\KategoriController;
@@ -19,9 +21,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// landing page
+Route::get('/', function () {return view('landing page.index');});
+
+// login
+Route::get('/login', [AuthController::class, 'showlogin'])->name('login');
+Route::post('/login', [AuthController::class, 'proseslogin'])->name('login.process');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Dashboard 
+Route::get('/dashboard', [DashboardController::class, 'index']) ->name('dashboard.index');
 
 // Ruang
 Route::get('/ruang', [RuangController::class, 'index'])->name('ruang.index'); // Tampilkan semua ruang
@@ -70,11 +79,3 @@ Route::post('/user', [UserController::class, 'store'])->name('user.store'); // S
 Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit'); // Form edit user
 Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update'); // Update user
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy'); // Hapus user
-
-// Masa Ekonomis
-
-
-//landing page
-Route::get('/', function () {
-    return view('landing page.index');
-});

@@ -1600,8 +1600,8 @@
             </div>
         </a>
 
-        <a href="{{ route('user.index') }}" class="login-button">
-            Login
+        <a href="{{ route('login') }}">
+            <button type="button">Login</button>
         </a>
     </nav>
 

@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -12,7 +11,11 @@ class User extends Authenticatable
 
     protected $primaryKey = 'user_id';
     protected $fillable = [
-        'nama', 'username', 'email', 'no_telp', 'password',
+        'nama', 
+        'username', 
+        'email', 
+        'no_telp', 
+        'password',
     ];
 
     protected $hidden = [
