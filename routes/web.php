@@ -25,9 +25,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('landing page.index');});
 
 // login
-Route::get('/login', [AuthController::class, 'showlogin'])->name('login');
-Route::post('/login', [AuthController::class, 'proseslogin'])->name('login.process');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/login', [AuthController::class, 'showlogin'])->name('login.index');
+Route::post('/login', [AuthController::class, 'login'])->name('login.process');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout.index');
 
 // Dashboard 
 Route::get('/dashboard', [DashboardController::class, 'index']) ->name('dashboard.index');

@@ -80,6 +80,12 @@
                   <p>Masa Ekonomis</p>
                 </a>
               </li>
+              <li class="nav-item">
+                  <a href="{{ route('logout.index') }}" class="nav-link">
+                      <i class="nav-icon fas fa-sign-out-alt"></i>
+                      <p>Logout</p>
+                  </a>
+              </li>
             <!-- </ul> -->
           </li>
           
