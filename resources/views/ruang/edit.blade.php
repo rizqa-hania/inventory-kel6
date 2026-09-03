@@ -20,8 +20,8 @@
                 </div>
             </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">Perbarui</button>
-                     <a href="{{route('ruang.index')}}" class="btn btn-success btn-sm">Kembali</a>
+                    <a href="{{route('ruang.index')}}" class="btn btn-success btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
+                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"></i> Perbarui</button>
                 </div>
             </form>
         </div>

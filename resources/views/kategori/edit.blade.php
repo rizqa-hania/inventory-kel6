@@ -34,14 +34,13 @@
                             class="form-control"
                             placeholder="Masukkan deskripsi">{{ $kategori->deskripsi }}</textarea>
                     </div>
-
-                    <button type="submit" class="btn btn-success">
-                        Perbarui
-                    </button>
-
-                    <a href="{{ route('kategori.index') }}" class="btn btn-secondary">
+                    
+                    <a href="{{ route('kategori.index') }}" class="btn btn-secondary btn-sm"><i class="fas fa-arrow-left"></i>
                         Kembali
                     </a>
+                    <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>
+                        Perbarui
+                    </button>
 
                 </form>
 

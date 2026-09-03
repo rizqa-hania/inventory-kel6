@@ -27,14 +27,12 @@
                             id="deskripsi"
                             class="form-control"></textarea>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        Simpan
-                    </button>
-
-                    <a href="{{ route('kategori.index') }}" class="btn btn-secondary">
+                    <a href="{{ route('kategori.index') }}" class="btn btn-secondary btn-sm"><i class="fas fa-arrow-left"></i>
                         Kembali
                     </a>
+                    <button type="submit" class="btn btn-primary" class="btn btn-success btn-sm"> <i class="fas fa-save"></i>
+                        Simpan
+                    </button>
 
                 </form>
 

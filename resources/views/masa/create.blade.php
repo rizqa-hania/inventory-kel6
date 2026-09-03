@@ -45,7 +45,7 @@
                 </div>
                 <div class="card-footer">
                     <a href="{{route('masa.index')}}" class="btn btn-secondary btn-sm px-3"><i class="fas fa-arrow-left"></i> Kembali</a>
-                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"> Simpan</i></button>
+                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"></i> Simpan</button>
                 </div>
                 </form>
             </div>
