@@ -20,55 +20,63 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// landing page
-Route::get('/', function () { 
+// Landing Page
+Route::get('/', function () {
     return view('landing page.index');
-    })->name('landing page.index');
+})->name('landing page.index');
 
-// login
-Route::get('/login', [AuthController::class, 'showlogin'])->name('login.index');
+// Login
+Route::get('/login', [AuthController::class, 'showlogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.process');
+
+// Logout
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout.index');
 
-// Dashboard 
-Route::get('/dashboard', [DashboardController::class, 'index']) ->name('dashboard.index');
 
-// Ruang
-Route::get('/ruang', [RuangController::class, 'index'])->name('ruang.index'); // Tampilkan semua ruang
-Route::get('/ruang/create', [RuangController::class, 'create'])->name('ruang.create'); // Form tambah ruang
-Route::post('/ruang', [RuangController::class, 'store'])->name('ruang.store'); // Simpan ruang baru
-Route::get('/ruang/{id}/edit', [RuangController::class, 'edit'])->name('ruang.edit'); // Form edit ruang
-Route::put('/ruang/{id}', [RuangController::class, 'update'])->name('ruang.update'); // Update ruang
-Route::delete('/ruang/{id}', [RuangController::class, 'destroy'])->name('ruang.destroy'); // Hapus ruang
+// ROUTE YANG HARUS LOGIN
+Route::middleware(['auth'])->group(function () {
 
-// Kategori
-Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index'); // Tampilkan semua kategori
-Route::get('/kategori/create', [KategoriController::class, 'create'])->name('kategori.create'); // Form tambah kategori
-Route::post('/kategori', [KategoriController::class, 'store'])->name('kategori.store'); // Simpan kategori baru
-Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('kategori.edit'); // Form edit kategori
-Route::put('/kategori/{id}', [KategoriController::class, 'update'])->name('kategori.update'); // Update kategori
-Route::delete('/kategori/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy'); // Hapus kategori
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-// Barang
-Route::get('/barang', [BarangController::class, 'index'])->name('barang.index'); // Tampilkan semua barang
-Route::get('/barang/create', [BarangController::class, 'create'])->name('barang.create'); // Form tambah barang
-Route::post('/barang', [BarangController::class, 'store'])->name('barang.store'); // Simpan barang baru
-Route::get('/barang/{id}/edit', [BarangController::class, 'edit'])->name('barang.edit'); // Form edit barang
-Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update'); // Update barang
-Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy'); // Hapus barang
+    // Ruang
+    Route::get('/ruang', [RuangController::class, 'index'])->name('ruang.index');
+    Route::get('/ruang/create', [RuangController::class, 'create'])->name('ruang.create');
+    Route::post('/ruang', [RuangController::class, 'store'])->name('ruang.store');
+    Route::get('/ruang/{id}/edit', [RuangController::class, 'edit'])->name('ruang.edit');
+    Route::put('/ruang/{id}', [RuangController::class, 'update'])->name('ruang.update');
+    Route::delete('/ruang/{id}', [RuangController::class, 'destroy'])->name('ruang.destroy');
 
-// Masa Ekonomis
-Route::get('/masa', [MasaController::class, 'index'])->name('masa.index'); // Tampilkan semua masa
-Route::get('/masa/create', [MasaController::class, 'create'])->name('masa.create'); // Form tambah masa
-Route::post('/masa', [MasaController::class, 'store'])->name('masa.store'); // Simpan masa baru
-Route::get('/masa/{id}/edit', [MasaController::class, 'edit'])->name('masa.edit'); // Form edit masa
-Route::put('/masa/{id}', [MasaController::class, 'update'])->name('masa.update'); // Update masa
-Route::delete('/masa/{id}', [MasaController::class, 'destroy'])->name('masa.destroy'); // Hapus masa
+    // Kategori
+    Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
+    Route::get('/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
+    Route::post('/kategori', [KategoriController::class, 'store'])->name('kategori.store');
+    Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('kategori.edit');
+    Route::put('/kategori/{id}', [KategoriController::class, 'update'])->name('kategori.update');
+    Route::delete('/kategori/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');
 
-// User
-Route::get('/user', [UserController::class, 'index'])->name('user.index'); // Tampilkan semua user
-Route::get('/user/create', [UserController::class, 'create'])->name('user.create'); // Form tambah user
-Route::post('/user', [UserController::class, 'store'])->name('user.store'); // Simpan user baru
-Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit'); // Form edit user
-Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update'); // Update user
-Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy'); // Hapus user
+    // Barang
+    Route::get('/barang', [BarangController::class, 'index'])->name('barang.index');
+    Route::get('/barang/create', [BarangController::class, 'create'])->name('barang.create');
+    Route::post('/barang', [BarangController::class, 'store'])->name('barang.store');
+    Route::get('/barang/{id}/edit', [BarangController::class, 'edit'])->name('barang.edit');
+    Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update');
+    Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
+
+    // Masa Ekonomis
+    Route::get('/masa', [MasaController::class, 'index'])->name('masa.index');
+    Route::get('/masa/create', [MasaController::class, 'create'])->name('masa.create');
+    Route::post('/masa', [MasaController::class, 'store'])->name('masa.store');
+    Route::get('/masa/{id}/edit', [MasaController::class, 'edit'])->name('masa.edit');
+    Route::put('/masa/{id}', [MasaController::class, 'update'])->name('masa.update');
+    Route::delete('/masa/{id}', [MasaController::class, 'destroy'])->name('masa.destroy');
+
+    // User
+    Route::get('/user', [UserController::class, 'index'])->name('user.index');
+    Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+    Route::post('/user', [UserController::class, 'store'])->name('user.store');
+    Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
+    Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+});

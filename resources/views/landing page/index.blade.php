@@ -1600,7 +1600,7 @@
             </div>
         </a>
 
-        <a href="{{ route('login.index') }}" class="login-button">
+        <a href="{{ route('login') }}" class="login-button">
             Login
         </a>
     </nav>
@@ -1631,7 +1631,7 @@
                     </p>
 
                     <div class="hero-actions">
-                        <a href="{{ route('login.index') }}" class="primary-button">
+                        <a href="{{ route('login') }}" class="primary-button">
                             Mulai Sekarang
                         </a>
                     </div>
