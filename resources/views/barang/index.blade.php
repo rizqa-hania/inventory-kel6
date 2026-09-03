@@ -23,7 +23,7 @@
                             <th>Merk</th>
                             <th>Jumlah</th>
                             <th>Ruang</th>
-                            <th>Jenis</th>
+                            <th>Kategori</th>
                             <th>Status</th>
                             <th>
                                 <a href="{{ route('barang.create') }}" class="btn btn-primary btn-sm">  + Tambah Barang </a>
@@ -39,7 +39,7 @@
                         <td>{{ $b->merk }}</td>
                         <td>{{ $b->jumlah }}</td>
                         <td>{{ $b->ruang->nama_ruang }}</td>
-                        <td>{{ $b->jenis->jenis_barang }}</td>
+                        <td>{{ $b->kategori->kategori_barang }}</td>
                         <td>{{ ucfirst($b->status) }}</td>
 
                         <td>

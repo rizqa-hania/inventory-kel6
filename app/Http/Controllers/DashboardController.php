@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Barang;
-use App\Jenis;
 use App\Kategori;
 use App\Ekonomis;
 use App\Ruang;
@@ -21,7 +20,6 @@ class DashboardController extends Controller
         // Mengambil jumlah seluruh data
         $jumlahBarang = Barang::count();
         $jumlahRuang = Ruang::count();
-        $jumlahJenis = Jenis::count();
         $jumlahKategori = Kategori::count();
         $jumlahMasa = Ekonomis::count();
         $jumlahUser = User::count();
@@ -30,7 +28,6 @@ class DashboardController extends Controller
         return view('dashboard.index', compact(
             'jumlahBarang',
             'jumlahRuang',
-            'jumlahJenis',
             'jumlahKategori',
             'jumlahMasa',
             'jumlahUser'

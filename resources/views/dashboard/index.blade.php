@@ -61,34 +61,6 @@
     </div>
 
 
-    {{-- Total Jenis --}}
-    <div class="col-lg-4 col-6">
-
-        <div class="small-box bg-warning">
-
-            <div class="inner">
-
-                <h3>{{ $jumlahJenis }}</h3>
-
-                <p>Total Jenis</p>
-
-            </div>
-
-            <div class="icon">
-                <i class="fas fa-list"></i>
-            </div>
-
-            <a href="{{ route('jenis.index') }}" class="small-box-footer">
-
-                Lihat Jenis
-                <i class="fas fa-arrow-circle-right"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
 
     {{-- Total Kategori --}}
     <div class="col-lg-4 col-6">

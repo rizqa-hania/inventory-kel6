@@ -19,7 +19,7 @@ class CreateBarangTable extends Migration
             $table->string('merk');
             $table->integer('jumlah');
             $table->foreignId('ruang_id')->references('ruang_id')->on('ruang');
-            $table->foreignId('jenis_id')->references('jenis_id')->on('jenis');
+            $table->foreignId('kategori_id')->references('kategori_id')->on('kategori');
             $table->enum('status', ['baik', 'rusak ringan', 'rusak berat', 'dalam perbaikan', 'tidak digunakan']);
             $table->timestamps();
         });

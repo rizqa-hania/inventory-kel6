@@ -42,8 +42,8 @@
                                 <form action="{{ route('masa.destroy', $v->masa_id) }}" method="POST" style="display: inline">
                                     @csrf
                                     @method('DELETE')
-                                    <a href="{{ route('masa.edit', $v->masa_id) }}">Edit</a>
-                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data masa ekonomis ini?')">Hapus</button>
+                                    <a href="{{ route('masa.edit', $v->masa_id) }}" class="btn btn-success btn-sm">Edit</a>
+                                    <button type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data masa ekonomis ini?')" class="btn btn-danger btn-sm">Hapus</button>
                                 </form>
                             </td>
                         </tr>

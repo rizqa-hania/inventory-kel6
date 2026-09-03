@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Barang;
 use App\Ruang;
-use App\Jenis;
+use App\Kategori;
 
 class BarangController extends Controller
 {
@@ -16,7 +16,7 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barang = Barang::with('ruang', 'jenis')->get();
+        $barang = Barang::with('ruang', 'kategori')->get();
         return view('barang.index', compact('barang'));
     }
 
@@ -28,8 +28,8 @@ class BarangController extends Controller
     public function create()
     {
         $ruang = Ruang::all();
-        $jenis = Jenis::all();
-        return view('barang.create', compact('ruang', 'jenis'));
+        $kategori = Kategori::all();
+        return view('barang.create', compact('ruang', 'kategori'));
     }
 
     /**
@@ -45,7 +45,7 @@ class BarangController extends Controller
             'merk' => 'required',
             'jumlah' => 'required|integer',
             'ruang_id' => 'required|exists:ruang,ruang_id',
-            'jenis_id' => 'required|exists:jenis,jenis_id',
+            'kategori_id' => 'required|exists:kategori,kategori_id',
             'status' => 'required',
         ]);
 
@@ -54,7 +54,7 @@ class BarangController extends Controller
             'merk' => $request->merk,
             'jumlah' => $request->jumlah,
             'ruang_id' => $request->ruang_id,
-            'jenis_id' => $request->jenis_id,
+            'kategori_id' => $request->kategori_id,
             'status' => $request->status,
         ]);
 
@@ -82,8 +82,8 @@ class BarangController extends Controller
     {
         $barang = Barang::findOrFail($id);
         $ruang = Ruang::all();
-        $jenis = Jenis::all();
-        return view('barang.edit', compact('barang', 'ruang', 'jenis'));
+        $kategori = Kategori::all();
+        return view('barang.edit', compact('barang', 'ruang', 'kategori'));
     }
 
     /**
@@ -100,7 +100,7 @@ class BarangController extends Controller
             'merk' => 'required',
             'jumlah' => 'required|integer',
             'ruang_id' => 'required|exists:ruang,ruang_id',
-            'jenis_id' => 'required|exists:jenis,jenis_id',
+            'kategori_id' => 'required|exists:jenis,kategori_id',
             'status' => 'required',
         ]);
 
@@ -110,7 +110,7 @@ class BarangController extends Controller
             'merk' => $request->merk,
             'jumlah' => $request->jumlah,
             'ruang_id' => $request->ruang_id,
-            'jenis_id' => $request->jenis_id,
+            'kategori_id' => $request->kategori_id,
             'status' => $request->status,
         ]);
 
