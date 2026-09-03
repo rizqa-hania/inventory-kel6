@@ -21,7 +21,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // landing page
-Route::get('/', function () {return view('landing page.index');});
+Route::get('/', function () { 
+    return view('landing page.index');
+    })->name('landing page.index');
 
 // login
 Route::get('/login', [AuthController::class, 'showlogin'])->name('login.index');
