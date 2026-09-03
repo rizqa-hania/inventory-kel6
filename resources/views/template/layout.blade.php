@@ -2,37 +2,14 @@
 <html lang="id">
 
 <head>
-
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Inventaris Barang</title>
-
-    {{-- =========================
-         FONT AWESOME
-    ========================= --}}
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    {{-- =========================
-         BOOTSTRAP
-    ========================= --}}
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
-    {{-- =========================
-         ADMINLTE
-    ========================= --}}
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
 
     <style>
-
-        /* =====================================================
-           GLOBAL
-        ===================================================== */
 
         body {
             background: #f4f6f9;
@@ -42,22 +19,11 @@
             background: #f4f6f9;
         }
 
-
-        /* =====================================================
-           SIDEBAR
-           Lebar sidebar: 270px
-        ===================================================== */
-
         .main-sidebar {
             width: 270px !important;
             background: #ffffff !important;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
         }
-
-
-        /* =====================================================
-           BRAND / LOGO
-        ===================================================== */
 
         .brand-link {
             width: 270px !important;
@@ -89,19 +55,9 @@
             white-space: nowrap;
         }
 
-
-        /* =====================================================
-           SIDEBAR CONTENT
-        ===================================================== */
-
         .main-sidebar .sidebar {
             width: 270px !important;
         }
-
-
-        /* =====================================================
-           SEARCH SIDEBAR
-        ===================================================== */
 
         .form-inline {
             padding-left: 10px !important;
@@ -150,11 +106,6 @@
             color: #1677ff !important;
         }
 
-
-        /* =====================================================
-           JUDUL MENU
-        ===================================================== */
-
         .nav-sidebar .nav-header {
             color: #8a96a3 !important;
 
@@ -168,11 +119,6 @@
 
             margin-top: 10px;
         }
-
-
-        /* =====================================================
-           SEMUA MENU
-        ===================================================== */
 
         .nav-sidebar .nav-link {
             color: #344054 !important;
@@ -192,11 +138,6 @@
             transition: all 0.2s ease;
         }
 
-
-        /* =====================================================
-           ICON MENU
-        ===================================================== */
-
         .nav-sidebar .nav-link .nav-icon {
             color: #667085 !important;
 
@@ -204,11 +145,6 @@
 
             margin-right: 7px;
         }
-
-
-        /* =====================================================
-           TEKS MENU
-        ===================================================== */
 
         .nav-sidebar .nav-link p {
             color: #344054 !important;
@@ -219,11 +155,6 @@
 
             margin-bottom: 0;
         }
-
-
-        /* =====================================================
-           HOVER
-        ===================================================== */
 
         .nav-sidebar .nav-link:hover {
             background: #f5f7fa !important;
@@ -238,11 +169,6 @@
         .nav-sidebar .nav-link:hover .nav-icon {
             color: #1677ff !important;
         }
-
-
-        /* =====================================================
-           MENU AKTIF
-        ===================================================== */
 
         .nav-sidebar .nav-link.active {
             background: #f1f6ff !important;
@@ -274,22 +200,11 @@
             background: #f1f6ff !important;
         }
 
-
-        /* =====================================================
-           CONTENT / NAVBAR / FOOTER
-           Menyesuaikan sidebar 270px
-        ===================================================== */
-
         .content-wrapper,
         .main-header,
         .main-footer {
             margin-left: 270px !important;
         }
-
-
-        /* =====================================================
-           NAVBAR
-        ===================================================== */
 
         .main-header {
             background: #ffffff !important;
@@ -307,11 +222,6 @@
             color: #1677ff !important;
         }
 
-
-        /* =====================================================
-           CONTENT HEADER
-        ===================================================== */
-
         .content-header h1 {
             font-weight: 600;
 
@@ -321,11 +231,6 @@
         .content-header p {
             color: #6b7280;
         }
-
-
-        /* =====================================================
-           WELCOME CARD
-        ===================================================== */
 
         .welcome-card {
             border-radius: 10px;
@@ -340,11 +245,6 @@
 
             font-weight: 500;
         }
-
-
-        /* =====================================================
-           STAT CARD
-        ===================================================== */
 
         .small-box {
             border-radius: 9px;
@@ -362,23 +262,56 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
         }
 
+
+        /* ANGKA TOTAL */
+
         .small-box .inner h3 {
             font-size: 28px;
 
             font-weight: 600;
+
+            color: #ffffff !important;
         }
 
 
-        /* =====================================================
-           DASHBOARD CARD
-        ===================================================== */
+        /* NAMA STATISTIK */
+
+        .small-box .inner p {
+            color: #ffffff !important;
+
+            font-size: 15px;
+
+            font-weight: 500;
+        }
+
+
+        /* ICON CARD */
+
+        .small-box .icon {
+            color: rgba(255, 255, 255, 0.25) !important;
+        }
+
+
+        /* MORE INFO */
+
+        .small-box .small-box-footer {
+            color: #ffffff !important;
+
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .small-box .small-box-footer:hover {
+            color: #ffffff !important;
+
+            background: rgba(0, 0, 0, 0.15);
+        }
 
         .dashboard-card {
             border: none;
 
             border-radius: 9px;
 
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(120, 113, 113, 0.06);
         }
 
         .dashboard-card .card-header {
@@ -395,11 +328,6 @@
             font-weight: 600;
         }
 
-
-        /* =====================================================
-           QUICK MENU
-        ===================================================== */
-
         .quick-menu {
             border-radius: 7px;
 
@@ -407,11 +335,6 @@
 
             font-weight: 500;
         }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
 
         .main-footer {
             background: #ffffff;
@@ -425,11 +348,6 @@
             color: #007bff;
         }
 
-
-        /* =====================================================
-           SIDEBAR COLLAPSE
-        ===================================================== */
-
         body.sidebar-collapse .main-sidebar {
             margin-left: -270px !important;
         }
@@ -439,11 +357,6 @@
         body.sidebar-collapse .main-footer {
             margin-left: 0 !important;
         }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
 
         @media (max-width: 991.98px) {
 
@@ -469,333 +382,152 @@
 
 
 <body class="hold-transition sidebar-mini">
-
 <div class="wrapper">
-
-
-    {{-- =====================================================
-         NAVBAR
-    ===================================================== --}}
-
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-
-        {{-- Hamburger --}}
-
         <ul class="navbar-nav">
-
             <li class="nav-item">
-
-                <a class="nav-link"
-                   data-widget="pushmenu"
-                   href="#"
-                   role="button">
-
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">
                     <i class="fas fa-bars"></i>
-
                 </a>
-
             </li>
-
         </ul>
-
-
-        {{-- Right Navbar --}}
 
         <ul class="navbar-nav ml-auto">
-
             <li class="nav-item">
-
                 <span class="nav-link">
-
                     <i class="fas fa-user-circle mr-1"></i>
-
                     {{ Auth::user()->nama ?? 'User' }}
-
                 </span>
-
             </li>
-
         </ul>
-
     </nav>
 
-
-    {{-- =====================================================
-         SIDEBAR
-    ===================================================== --}}
-
     <aside class="main-sidebar sidebar-light-primary elevation-2">
-
-
-        {{-- BRAND --}}
-
-        <a href="{{ route('dashboard.index') }}"
-           class="brand-link">
-
-            <img src="{{ asset('images/logo inventory.png') }}"
-                 alt="Logo"
-                 class="brand-image img-circle elevation-1">
-
+        <a href="{{ route('dashboard.index') }}" class="brand-link">
+            <img src="{{ asset('images/logo inventory.png') }}" alt="Logo" class="brand-image img-circle elevation-1">
             <span class="brand-text">
                 INVENTORY SEKOLAH
             </span>
-
         </a>
 
-
-        {{-- SIDEBAR CONTENT --}}
-
         <div class="sidebar">
-
-
-            {{-- SEARCH --}}
-
             <div class="form-inline mt-3 mb-2">
-
                 <div class="input-group">
-
-                    <input class="form-control form-control-sidebar"
-                           type="search"
-                           placeholder="Cari menu..."
-                           aria-label="Search">
-
+                    <input class="form-control form-control-sidebar" type="search" placeholder="Cari menu..." aria-label="Search">
                     <div class="input-group-append">
-
                         <button class="btn btn-sidebar">
-
                             <i class="fas fa-search"></i>
-
                         </button>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-            {{-- MENU --}}
-
             <nav class="mt-3">
-
-                <ul class="nav nav-pills nav-sidebar flex-column"
-                    data-widget="treeview"
-                    role="menu">
-
-
-                    {{-- =========================
-                         MENU UTAMA
-                    ========================= --}}
-
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
                     <li class="nav-header">
                         MENU UTAMA
                     </li>
-
-
-                    {{-- DASHBOARD --}}
-
                     <li class="nav-item">
-
-                        <a href="{{ route('dashboard.index') }}"
-                           class="nav-link {{ request()->routeIs('dashboard.index') ? 'active' : '' }}">
-
+                        <a href="{{ route('dashboard.index') }}" class="nav-link {{ request()->routeIs('dashboard.index') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-home"></i>
-
                             <p>
                                 Dashboard
                             </p>
-
                         </a>
-
                     </li>
 
-
-                    {{-- USER --}}
-
                     <li class="nav-item">
-
                         <a href="{{ route('user.index') }}"
                            class="nav-link {{ request()->routeIs('user.*') ? 'active' : '' }}">
-
                             <i class="nav-icon fas fa-users"></i>
-
                             <p>
                                 User
                             </p>
-
                         </a>
-
                     </li>
 
-
-                    {{-- RUANG --}}
-
                     <li class="nav-item">
-
                         <a href="{{ route('ruang.index') }}"
                            class="nav-link {{ request()->routeIs('ruang.*') ? 'active' : '' }}">
-
                             <i class="nav-icon fas fa-door-open"></i>
-
                             <p>
                                 Ruang
                             </p>
-
                         </a>
-
                     </li>
 
-
-                    {{-- KATEGORI --}}
-
                     <li class="nav-item">
-
                         <a href="{{ route('kategori.index') }}"
                            class="nav-link {{ request()->routeIs('kategori.*') ? 'active' : '' }}">
-
                             <i class="nav-icon fas fa-tags"></i>
-
                             <p>
                                 Kategori
                             </p>
-
                         </a>
-
                     </li>
 
-
-                    {{-- BARANG --}}
-
                     <li class="nav-item">
-
                         <a href="{{ route('barang.index') }}"
                            class="nav-link {{ request()->routeIs('barang.*') ? 'active' : '' }}">
-
                             <i class="nav-icon fas fa-box"></i>
-
                             <p>
                                 Barang
                             </p>
-
                         </a>
-
                     </li>
 
-
-                    {{-- MASA EKONOMIS --}}
-
                     <li class="nav-item">
-
                         <a href="{{ route('masa.index') }}"
                            class="nav-link {{ request()->routeIs('masa.*') ? 'active' : '' }}">
-
                             <i class="nav-icon fas fa-hourglass-half"></i>
-
                             <p>
                                 Masa Ekonomis
                             </p>
-
                         </a>
-
                     </li>
-
-
-                    {{-- =========================
-                         AKUN
-                    ========================= --}}
 
                     <li class="nav-header">
                         AKUN
                     </li>
 
-
-                    {{-- LOGOUT --}}
-
                     <li class="nav-item">
-
                         <a href="{{ route('logout.index') }}"
                            class="nav-link logout-link">
-
                             <i class="nav-icon fas fa-sign-out-alt"></i>
-
                             <p>
                                 Logout
                             </p>
-
                         </a>
-
                     </li>
-
-
                 </ul>
-
             </nav>
-
         </div>
-
     </aside>
 
-
-    {{-- =====================================================
-         CONTENT
-    ===================================================== --}}
-
     <div class="content-wrapper">
-
         <section class="content-header">
-
             <div class="container-fluid">
-
                 @yield('content')
-
             </div>
-
         </section>
-
     </div>
 
-
-    {{-- =====================================================
-         FOOTER
-    ===================================================== --}}
-
     <footer class="main-footer">
-
         <strong>
-
             Copyright &copy; 2026
-
             <span class="text-primary">
                 Inventory Sekolah
             </span>.
-
         </strong>
-
         All rights reserved.
-
         <div class="float-right d-none d-sm-inline">
-
             Sistem Informasi Inventaris Barang
-
         </div>
-
     </footer>
-
-
 </div>
 
-
-{{-- =====================================================
-     JAVASCRIPT
-===================================================== --}}
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-
-
 </body>
-
 </html>
