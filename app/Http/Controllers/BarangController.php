@@ -100,7 +100,7 @@ class BarangController extends Controller
             'merk' => 'required',
             'jumlah' => 'required|integer',
             'ruang_id' => 'required|exists:ruang,ruang_id',
-            'kategori_id' => 'required|exists:jenis,kategori_id',
+            'kategori_id' => 'required|exists:kategori,kategori_id',
             'status' => 'required',
         ]);
 
