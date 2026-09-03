@@ -15,7 +15,7 @@
 
                 <div class="card-body">
                     <h4>
-                        Selamat datang di Sistem Informasi Inventaris Barang 👋
+                        Selamat datang di Sistem Informasi Inventoris Barang 👋
                     </h4>
                     <p class="text-muted mb-0">
                         Gunakan menu di sebelah kiri untuk mengelola
