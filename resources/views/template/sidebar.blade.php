@@ -56,13 +56,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('jenis.index')}}" class="nav-link">
-                  <i class="fas fa-cubes"></i>
-                  <p>Jenis</p>
-                </a>
-                </li>
-              </li>
-              <li class="nav-item">
                 <a href="{{route('kategori.index')}}" class="nav-link">
                   <i class="fas fa-tags"></i>
                   <p>Kategori</p>

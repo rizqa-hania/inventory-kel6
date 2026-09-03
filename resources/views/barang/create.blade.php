@@ -55,19 +55,19 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Jenis :</label>
-                        <select name="jenis_id" class="form-control">
-                            <option value="">-- Pilih Jenis --</option>
+                        <label class="form-label">Kategori :</label>
+                        <select name="kategori_id" class="form-control">
+                            <option value="">-- Pilih Kategori --</option>
 
-                            @foreach ($jenis as $j)
-                                <option value="{{ $j->jenis_id }}" {{ old('jenis_id') == $j->jenis_id ? 'selected' : '' }}>
-                                    {{ $j->jenis_barang }}
+                            @foreach ($kategori as $j)
+                                <option value="{{ $j->kategori_id }}" {{ old('kategori_id') == $j->kategori_id ? 'selected' : '' }}>
+                                    {{ $j->kategori_barang }}
                                 </option>
                             @endforeach
                         </select>
 
-                        @if ($errors->has('jenis_id'))
-                            <span class="text-danger">{{ $errors->first('jenis_id') }}</span>
+                        @if ($errors->has('kategori_id'))
+                            <span class="text-danger">{{ $errors->first('kategori_id') }}</span>
                         @endif
                     </div>
 

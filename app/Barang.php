@@ -13,7 +13,7 @@ class Barang extends Model
         'merk',
         'jumlah',
         'ruang_id',
-        'jenis_id',
+        'kategori_id',
         'status',
     ];
 
@@ -22,11 +22,11 @@ class Barang extends Model
             return $this->belongsTo(Ruang::class, 'ruang_id', 'ruang_id');
         }
 
-    public function jenis()
+    public function kategori()
         {
-            return $this->belongsTo(Jenis::class, 'jenis_id', 'jenis_id');
+            return $this->belongsTo(Kategori::class, 'kategori_id', 'kategori_id');
         }
-
+        
     public function masaEkonomis()
         {
             return $this->hasOne(Ekonomis::class, 'barang_id', 'barang_id');
